@@ -38,19 +38,19 @@ export default function Navbar({ isLoggedIn, onLogout }) {
       <AppBar position="fixed" className={classes.root}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <NavLink to='/' className={classes.brand}>
+            <NavLink to='/Recipe-App-React-MUI' className={classes.brand}>
               Kitchen
             </NavLink>
           </Typography>
-          <NavLink to="/" className={classes.link}>
+          <NavLink to="/Recipe-App-React-MUI" className={classes.link}>
               HOME
             </NavLink>
           {isLoggedIn && (
-            <NavLink to="/recipes" className={classes.link}>
+            <NavLink to="/Recipe-App-React-MUI/recipes" className={classes.link}>
               RECIPES
             </NavLink>
           )}
-          <NavLink to="/about" className={classes.link}>
+          <NavLink to="/Recipe-App-React-MUI/about" className={classes.link}>
             ABOUT
           </NavLink>
           <a
@@ -63,11 +63,11 @@ export default function Navbar({ isLoggedIn, onLogout }) {
           </a>
 
           {!isLoggedIn ? (
-            <NavLink to="/login" className={classes.link}>
+            <NavLink to="/Recipe-App-React-MUI/login" className={classes.link}>
               LOGIN
             </NavLink>
           ) : (
-            <NavLink to="/" className={classes.link} onClick={onLogout}>
+            <NavLink to="/Recipe-App-React-MUI" className={classes.link} onClick={onLogout}>
               LOGOUT
             </NavLink>
           )}
