@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Recipe-App-React-MUI/static/css/main.7d355d12.css",
+    "main.js": "/Recipe-App-React-MUI/static/js/main.c7fefdc7.js",
+    "static/media/traditionalFood.jpeg": "/Recipe-App-React-MUI/static/media/traditionalFood.8fcdfd9bce1f712f870d.jpeg",
+    "static/media/eatingOut.jpeg": "/Recipe-App-React-MUI/static/media/eatingOut.f58059aea74b0241b51d.jpeg",
+    "index.html": "/Recipe-App-React-MUI/index.html",
+    "main.7d355d12.css.map": "/Recipe-App-React-MUI/static/css/main.7d355d12.css.map",
+    "main.c7fefdc7.js.map": "/Recipe-App-React-MUI/static/js/main.c7fefdc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d355d12.css",
+    "static/js/main.c7fefdc7.js"
+  ]
+}
