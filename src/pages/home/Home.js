@@ -72,7 +72,7 @@ const Home = ({ isLoggedIn }) => {
       {isLoggedIn ? (
         <div className={classes.bottomContainer}>
           <p>Visit our recipes page to find the right food!</p>
-          <NavLink to="/recipes" style={{ textDecoration: "none" }}>
+          <NavLink to="/Recipe-App-React-MUI/recipes" style={{ textDecoration: "none" }}>
             <Button
               className={classes.button}
               variant="contained"
@@ -84,7 +84,7 @@ const Home = ({ isLoggedIn }) => {
       ) : (
         <div className={classes.bottomContainer}>
           <p>Login to find the right food!</p>
-          <NavLink to="/login" style={{ textDecoration: "none" }}>
+          <NavLink to="/Recipe-App-React-MUI/login" style={{ textDecoration: "none" }}>
             <Button
               className={classes.button}
               variant="contained"
