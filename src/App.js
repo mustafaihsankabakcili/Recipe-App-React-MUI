@@ -45,19 +45,31 @@ function App() {
 
   const detailHandler = (detail) => {
     setDetail(detail);
-    navigate('/Recipe-App-React-MUI/detail');
-  }
+    navigate("/Recipe-App-React-MUI/detail");
+  };
 
   return (
     <div className="App">
       <ToastContainer toastStyle={{ backgroundColor: "#272727" }} />
       <Navbar isLoggedIn={isLoggedIn} onLogout={logoutHandler} />
       <Routes>
-        <Route path="/Recipe-App-React-MUI/" element={<Home isLoggedIn={isLoggedIn} />} />
-        <Route path="/Recipe-App-React-MUI/recipes" element={<Recipes detailHandler={detailHandler}/>} />
-        <Route path="/Recipe-App-React-MUI/login" element={<Login onLogin={loginHandler} />} />
+        <Route
+          path="/Recipe-App-React-MUI/"
+          element={<Home isLoggedIn={isLoggedIn} />}
+        />
+        <Route
+          path="/Recipe-App-React-MUI/recipes"
+          element={<Recipes detailHandler={detailHandler} />}
+        />
+        <Route
+          path="/Recipe-App-React-MUI/login"
+          element={<Login onLogin={loginHandler} />}
+        />
         <Route path="/Recipe-App-React-MUI/about" element={<About />} />
-        <Route path="/Recipe-App-React-MUI/detail" element={<Detail detail={detail}/>} />
+        <Route
+          path="/Recipe-App-React-MUI/detail"
+          element={<Detail detail={detail} />}
+        />
       </Routes>
     </div>
   );

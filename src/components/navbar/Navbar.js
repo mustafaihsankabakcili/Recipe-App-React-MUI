@@ -5,31 +5,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
+import navbarStyles from "./navbarStyles";
 
-const useStyles = makeStyles({
-  root: {
-    '&.MuiPaper-root':{
-      backgroundColor: '#272727'
-    }
-  },
-
-  brand: {
-    color: "#FFD523",
-    textDecoration: "none",
-    fontSize: "30px",
-    fontWeight: "600",
-  },
-
-  link: {
-    color: "white",
-    textDecoration: "none",
-    margin: "10px",
-    fontWeight: "600",
-    "&:hover": {
-      color: "#FFD523",
-    },
-  },
-});
+const useStyles = makeStyles(navbarStyles);
 
 export default function Navbar({ isLoggedIn, onLogout }) {
   const classes = useStyles();
@@ -38,15 +16,18 @@ export default function Navbar({ isLoggedIn, onLogout }) {
       <AppBar position="fixed" className={classes.root}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <NavLink to='/Recipe-App-React-MUI/' className={classes.brand}>
+            <NavLink to="/Recipe-App-React-MUI/" className={classes.brand}>
               Kitchen
             </NavLink>
           </Typography>
           <NavLink to="/Recipe-App-React-MUI/" className={classes.link}>
-              HOME
-            </NavLink>
+            HOME
+          </NavLink>
           {isLoggedIn && (
-            <NavLink to="/Recipe-App-React-MUI/recipes" className={classes.link}>
+            <NavLink
+              to="/Recipe-App-React-MUI/recipes"
+              className={classes.link}
+            >
               RECIPES
             </NavLink>
           )}
@@ -67,7 +48,11 @@ export default function Navbar({ isLoggedIn, onLogout }) {
               LOGIN
             </NavLink>
           ) : (
-            <NavLink to="/Recipe-App-React-MUI/" className={classes.link} onClick={onLogout}>
+            <NavLink
+              to="/Recipe-App-React-MUI/"
+              className={classes.link}
+              onClick={onLogout}
+            >
               LOGOUT
             </NavLink>
           )}
