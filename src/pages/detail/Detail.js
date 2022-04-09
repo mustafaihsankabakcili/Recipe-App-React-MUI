@@ -9,7 +9,6 @@ const useStyles = makeStyles(detailStyles);
 const Detail = ({ detail }) => {
   const navigate = useNavigate();
   const classes = useStyles();
-  console.log(detail);
 
   const [name, imgUrl, ingredients, nutrients] = detail;
 
