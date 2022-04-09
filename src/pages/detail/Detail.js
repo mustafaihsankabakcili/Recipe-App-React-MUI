@@ -108,7 +108,7 @@ const Detail = ({ detail }) => {
         <h3>Ingredients</h3>
         {ingredientsArr}
       </Box>
-      <Button className={classes.button} onClick={() => navigate('/Recipe-App-React-MUI/recipes')}>Back to Recipes</Button>
+      <Button className={classes.button} onClick={() => navigate('/recipes')}>Back to Recipes</Button>
     </Box>
   );
 };

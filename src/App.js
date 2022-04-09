@@ -19,7 +19,7 @@ function App() {
     if (username.length >= 6 && password.length >= 6) {
       toast.success("Successfully logged in!");
       setIsLoggedIn(true);
-      navigate("/Recipe-App-React-MUI");
+      navigate("/");
       return;
     }
 
@@ -45,7 +45,7 @@ function App() {
 
   const detailHandler = (detail) => {
     setDetail(detail);
-    navigate('/Recipe-App-React-MUI/detail');
+    navigate('/detail');
   }
 
   return (
@@ -53,11 +53,11 @@ function App() {
       <ToastContainer toastStyle={{ backgroundColor: "#272727" }} />
       <Navbar isLoggedIn={isLoggedIn} onLogout={logoutHandler} />
       <Routes>
-        <Route path="/Recipe-App-React-MUI" element={<Home isLoggedIn={isLoggedIn} />} />
-        <Route path="/Recipe-App-React-MUI/recipes" element={<Recipes detailHandler={detailHandler}/>} />
-        <Route path="/Recipe-App-React-MUI/login" element={<Login onLogin={loginHandler} />} />
-        <Route path="/Recipe-App-React-MUI/about" element={<About />} />
-        <Route path="/Recipe-App-React-MUI/detail" element={<Detail detail={detail}/>} />
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+        <Route path="/recipes" element={<Recipes detailHandler={detailHandler}/>} />
+        <Route path="/login" element={<Login onLogin={loginHandler} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail" element={<Detail detail={detail}/>} />
       </Routes>
     </div>
   );
